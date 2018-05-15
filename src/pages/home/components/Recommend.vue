@@ -2,7 +2,7 @@
 <div>
  <div class="title">热销推荐</div>
  <ul>
-    <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+    <li class="item border-bottom" v-for="item of list" :key="item.id">
         <img  class="item-img" :src='item.imgUrl' />
        <div class="item-info">
         <p class="item-title">{{item.title}}</p>
@@ -17,25 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1507/36/ce3d2d6c9ab44d67ae68d940b8781829.water.jpg_200x200_0938a8f2.jpg',
-        title: '北京森林动物园',
-        desc: '超级无敌好玩的动物园，主题公园'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1507/36/ce3d2d6c9ab44d67ae68d940b8781829.water.jpg_200x200_0938a8f2.jpg',
-        title: '北京森林动物园',
-        desc: '超级无敌好玩的动物园，主题公园'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1507/36/ce3d2d6c9ab44d67ae68d940b8781829.water.jpg_200x200_0938a8f2.jpg',
-        title: '北京森林动物园',
-        desc: '超级无敌好玩的动物园，主题公园'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
