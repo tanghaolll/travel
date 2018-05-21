@@ -20,8 +20,8 @@ export default {
   name: 'DetailBanner',
   props: {
     sightName: String,
-      bannerImg: String,
-      gallaryImgs: Array
+    bannerImg: String,
+    gallaryImgs: Array
   },
   data () {
     return {
@@ -37,7 +37,7 @@ export default {
     }
   },
   components: {
-    CommonGallary,FadeAnimation
+    CommonGallary, FadeAnimation
   }
 }
 </script>
